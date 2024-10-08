@@ -19,10 +19,9 @@ jobs:
           echo "Building site..." 
           mkdir -p public
           cp index.html public/index.html
-          echo "Github Actions Deployed!" > public/deployed.txt
 
       - name: Deploy to Github Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-main@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
